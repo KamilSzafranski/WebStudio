@@ -32,6 +32,17 @@
 
 .nav {
     @extend %icon;
+    &__btn {
+        border: none;
+        background-color: white;
+        transition: color;
+        cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: getcolor('backlight');
+        }
+    }
 }
 .nav-grid {
     // @include flex(none, center, 46px);
@@ -75,4 +86,98 @@
     &__icon {
         @extend %icon;
     }
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border: none;
+        background-color: white;
+        transition: color;
+        cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: getcolor('backlight');
+        }
+    }
+    &__icon {
+        @extend %icon;
+    }
+    &__container {
+        padding: 48px 0 48px 40px;
+        position: relative;
+        height: 100vh;
+    }
+    &__grid {
+        list-style: none;
+        font-family: $standard-font-family;
+        font-size: $menu-mobile-font-size;
+        line-height: $menu-mobile-line-height;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+    &__link {
+        @extend %link;
+        &:hover,
+        &:focus {
+            color: getcolor('backlight');
+        }
+        &--active {
+            color: getcolor('backlight');
+        }
+        &--media {
+            position: relative;
+            &:nth-child(-n + 3):after {
+                content: '|';
+                display: inline-flex;
+                color: #212121;
+                position: absolute;
+                right: -10px;
+                color: rgba(33, 33, 33, 0.2);
+            }
+        }
+    }
+    &__item {
+        &:nth-child(-n + 2) {
+            margin-bottom: 32px;
+        }
+        &:nth-last-child(1) {
+            position: absolute;
+            bottom: 48px;
+            left: 40px;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+            line-height: 1.22;
+            color: getcolor('backlight');
+        }
+        &:nth-last-child(2) {
+            position: absolute;
+            left: 40px;
+            bottom: 134px;
+            color: #757575;
+            font-size: 24px;
+            line-height: 1.17;
+        }
+        &:nth-last-child(3) {
+            position: absolute;
+            left: 40px;
+            bottom: 194px;
+        }
+    }
+}
+
+.is-open {
+    transform: translateX(0);
 }
