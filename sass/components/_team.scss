@@ -1,0 +1,58 @@
+.team {
+    @include section(team-bg, 60px);
+    &__title {
+        @extend %h2;
+    }
+    &__grid {
+        // @include flex(center, none, 30px);
+        list-style: none;
+    }
+    &__image-container {
+        margin: 0 auto 30px auto;
+        width: 270px;
+        background-color: getcolorI('label');
+        line-height: $label-line-height;
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+    &__image-label {
+        padding: 30px 0 24px 0;
+        background-color: getcolor('label');
+    }
+    &__image-name {
+        margin-bottom: 10px;
+        line-height: 1.17;
+        font-weight: $image-title-font-weight;
+        font-size: $team-font-size;
+    }
+    &__image-title {
+        margin-bottom: 16px;
+        font-size: $team-font-size;
+        line-height: 1.17;
+        color: getcolor('text');
+    }
+}
+
+.team-media {
+    @include flex(center, none, 10px);
+    list-style: none;
+    &__link {
+        @include flex(center, center, none);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        color: #afb1b8;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            background-color: getcolor('backlight');
+            color: getcolor('label');
+        }
+    }
+    &__icon {
+        @extend %icon;
+    }
+}

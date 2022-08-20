@@ -1,0 +1,160 @@
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal {
+    @include flex(center, center, none);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: getcolor('modal-bg');
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__box {
+        padding: 40px;
+        max-width: 450px;
+        position: relative;
+        background-color: getcolor('modal-box-bg');
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        cursor: auto;
+    }
+    &__icon {
+        @extend %icon;
+    }
+    &__btn {
+        @include flex(center, center, none);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 30px;
+        height: 30px;
+        background-color: get-color('modal-box-bg');
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            color: getcolor('backlight');
+        }
+    }
+}
+.services {
+    &__container {
+        @include flex(none, none, 12px);
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: $services-font-size;
+        font-weight: $servies-font-weight;
+        line-height: $services-line-height;
+        text-align: center;
+        color: getcolor('services');
+    }
+    &__label {
+        position: relative;
+        font-size: $services-label-font-size;
+        line-height: $services-label-line-height;
+        color: getcolor('services-label');
+        &:focus-within .services__icon {
+            color: getcolor('backlight');
+        }
+    }
+    &__description {
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+    &__icon {
+        fill: currentColor;
+        position: absolute;
+        color: getcolor('input-icon');
+        left: 12px;
+        bottom: 11px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__input {
+        @extend %input;
+        &:focus {
+            border-color: getcolor('backlight');
+            fill: getcolor('backlight');
+            color: getcolor('input');
+        }
+    }
+    &__com {
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+    &__comment {
+        @extend %input;
+        padding: 12px 16px;
+        resize: vertical;
+        min-height: 120px;
+        &::placeholder {
+            color: getcolor('placeholder');
+        }
+        &:focus {
+            border-color: getcolor('backlight');
+            fill: getcolor('backlight');
+            color: getcolor('input');
+        }
+    }
+    &__btn {
+        @extend %btn;
+        margin: 0 auto;
+        display: block;
+        padding: 10px 76px;
+        &:hover,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.rules {
+    @include flex(center, center, none);
+    position: relative;
+    margin-bottom: 30px;
+    &__label {
+        @include flex(center, none, none);
+        font-size: 12px;
+        line-height: 1.16;
+    }
+    &__link {
+        @extend %link;
+        color: getcolor('backlight');
+        text-decoration: underline;
+    }
+    &__icon {
+        margin-right: 8px;
+        width: 16px;
+        height: 15px;
+        cursor: pointer;
+        &--check {
+            display: none;
+        }
+    }
+    &__input {
+        appearance: none;
+        &:checked ~ .rules__icon--check {
+            display: block;
+        }
+        &:checked ~ .rules__icon--vector {
+            display: none;
+        }
+        &:not(:checked) ~ .rules__icon--vector {
+            visibility: visible;
+        }
+    }
+    &__description {
+        padding-top: 1px;
+    }
+}

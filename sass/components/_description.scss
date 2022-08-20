@@ -1,0 +1,35 @@
+.description {
+    @include section(section-bg, 60px);
+    &__grid {
+        padding: 0 15px;
+
+        // @include flex(space-around, none, none);
+        // column-gap: 30px;
+        list-style: none;
+        font-size: $standard-font-size;
+    }
+    &__item {
+        text-align: none;
+    }
+    &__container {
+        padding: 25px 0;
+        line-height: 0;
+        text-align: center;
+        background-color: #f5f4fa;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: $descritpion-title-font-weight;
+        font-size: $standard-font-size;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        color: getcolor('text');
+        line-height: $text-line-height;
+    }
+}

@@ -1,0 +1,30 @@
+.page-baner {
+    &__container {
+        padding: 118px 0;
+        margin: 0 auto;
+        color: getcolor('baner');
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $standard-font-family;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%, 50% 50%;
+        background-image: linear-gradient(to top, #2f303a66, #2f303a66),
+            url(../images/header-bg-mobile.jpg);
+    }
+    &__title {
+        margin: 0 auto 30px;
+        max-width: 365px;
+        font-size: 26px;
+        line-height: 1.61;
+        letter-spacing: 0.06em;
+    }
+    &__btn {
+        padding: 10px 41px 10px 42px;
+        @extend %btn;
+        &:hover,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+}
