@@ -207,12 +207,15 @@ image {
 .menu-mobile__link--media {
   position: relative;
 }
+.menu-mobile__link--media:not(:last-child) {
+  margin-right: 20px;
+}
 .menu-mobile__link--media:nth-child(-n+3):after {
   content: "|";
   display: inline-flex;
   color: #212121;
   position: absolute;
-  right: -10px;
+  right: -12px;
   color: rgba(33, 33, 33, 0.2);
 }
 .menu-mobile__item:nth-child(-n+2) {
@@ -223,6 +226,7 @@ image {
   bottom: 48px;
   left: 40px;
   display: flex;
+  width: 100%;
   gap: 20px;
   font-size: 18px;
   line-height: 1.22;
