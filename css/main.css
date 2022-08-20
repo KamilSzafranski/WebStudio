@@ -7,7 +7,6 @@
 .container {
   min-width: 270px;
   margin: 0 auto;
-  max-width: 480px;
 }
 
 body {
@@ -180,6 +179,7 @@ image {
 .description {
   padding: 60px 0;
   background-color: #fff;
+  min-width: 320px;
 }
 .description__grid {
   padding: 0 15px;
@@ -217,6 +217,7 @@ image {
 .team {
   padding: 60px 0;
   background-color: #f5f4fa;
+  min-width: 320px;
 }
 .team__grid {
   list-style: none;
@@ -272,6 +273,7 @@ image {
 .client {
   padding: 60px 0;
   background-color: #fff;
+  min-width: 320px;
 }
 .client__grid {
   display: flex;
@@ -302,6 +304,7 @@ image {
 .footer {
   padding: 60px 0;
   background-color: #2f303a;
+  min-width: 320px;
   text-align: center;
   color: #fff;
 }
@@ -417,6 +420,7 @@ image {
 .portfolio {
   padding: 94px 0;
   background-color: #fff;
+  min-width: 320px;
   font-size: 16px;
 }
 
