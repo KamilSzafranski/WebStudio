@@ -16,6 +16,7 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
         <header>
@@ -160,6 +161,7 @@
                             <li class="job__item">
                                 <figure class="job__image-container">
                                     <div class="job__label">aplikacje Mobilne</div>
+
                                     <img
                                         class="job__image"
                                         src="./images/img2.jpg"
@@ -191,13 +193,27 @@
                     <ul class="team__grid">
                         <li class="team__item">
                             <figure class="team__image-container">
-                                <img
-                                    class="team__image"
-                                    src="./images/productdesigner.jpg"
-                                    alt="Jonh Doe"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/tablet/productdesigner.jpg   1x,
+                                            ./images/tablet/productdesigner2x.jpg 2x
+                                        "
+                                        media="(min-width:768px) and (max-width:1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/mobile/productdesigner.jpg   1x,
+                                            ./images/mobile/productdesigner2x.jpg 2x
+                                        "
+                                        media="(max-width:767px)"
+                                    />
+                                    <img
+                                        class="team__image"
+                                        src="./images/productdesigner.jpg"
+                                        alt="Jonh Doe"
+                                    />
+                                </picture>
                                 <figcaption class="team__image-label">
                                     <p class="team__image-name">John Doe</p>
                                     <p class="team__image-title">Product Designer</p>
@@ -265,13 +281,27 @@
                         </li>
                         <li class="team__item">
                             <figure class="team__image-container">
-                                <img
-                                    class="team__image"
-                                    src="./images/frontend.jpg"
-                                    alt="Jonh Doe"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/tablet/frontend.jpg   1x,
+                                            ./images/tablet/frontend2x.jpg 2x
+                                        "
+                                        media="(min-width:768px) and (max-width:1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/mobile/frontend.jpg   1x,
+                                            ./images/mobile/frontend2x.jpg 2x
+                                        "
+                                        media="(max-width:767px)"
+                                    />
+                                    <img
+                                        class="team__image"
+                                        src="./images/frontend.jpg"
+                                        alt="Jonh Doe"
+                                    />
+                                </picture>
                                 <figcaption class="team__image-label">
                                     <p class="team__image-name">John Doe</p>
                                     <p class="team__image-title">Frontend Developer</p>
@@ -339,13 +369,27 @@
                         </li>
                         <li class="team__item">
                             <figure class="team__image-container">
-                                <img
-                                    class="team__image"
-                                    src="./images/marketing.jpg"
-                                    alt="Jonh Doe"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/tablet/marketing.jpg   1x,
+                                            ./images/tablet/marketing2x.jpg 2x
+                                        "
+                                        media="(min-width:768px) and (max-width:1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/mobile/marketing.jpg   1x,
+                                            ./images/mobile/marketing2x.jpg 2x
+                                        "
+                                        media="(max-width:767px)"
+                                    />
+                                    <img
+                                        class="team__image"
+                                        src="./images/marketing.jpg"
+                                        alt="Jonh Doe"
+                                    />
+                                </picture>
                                 <figcaption class="team__image-label">
                                     <p class="team__image-name">John Doe</p>
                                     <p class="team__image-title">Marketing</p>
@@ -413,13 +457,23 @@
                         </li>
                         <li class="team__item">
                             <figure class="team__image-container">
-                                <img
-                                    class="team__image"
-                                    src="./images/ui.jpg"
-                                    alt="Jonh Doe"
-                                    width="270"
-                                    height="260"
-                                />
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./images/tablet/ui.jpg   1x,
+                                            ./images/tablet/ui2x.jpg 2x
+                                        "
+                                        media="(min-width:768px) and (max-width:1199px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./images/mobile/ui.jpg   1x,
+                                            ./images/mobile/ui2x.jpg 2x
+                                        "
+                                        media="(max-width:767px)"
+                                    />
+                                    <img class="team__image" src="./images/ui.jpg" alt="Jonh Doe" />
+                                </picture>
                                 <figcaption class="team__image-label">
                                     <p class="team__image-name">John Doe</p>
                                     <p class="team__image-title">UI Designer</p>

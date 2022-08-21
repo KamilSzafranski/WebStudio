@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Zadanie domowe #7</title>
+        <title>Zadanie domowe #8</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -16,6 +16,7 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
         <header>
@@ -27,10 +28,28 @@
                                 ><span class="logo-grid__text">Web</span>Studio</a
                             >
                             <nav class="nav">
+                                <button
+                                    type="button"
+                                    class="nav__btn js-open-menu"
+                                    aria-expanded="false"
+                                    aria-controls="mobile-menu"
+                                >
+                                    <svg class="icon nav__icon" height="40" width="40">
+                                        <use href="./images/icons.svg#menu"></use>
+                                    </svg>
+                                </button>
                                 <ul class="nav-grid">
-                                    <li class="nav-grid__item"><a class="nav-grid__link" href="index.html">Agencja</a></li>
-                                    <li class="nav-grid__item"><a class="nav-grid__link active" href="portfolio.html">Portfolio</a></li>
-                                    <l class="nav-grid__item"><a class="nav-grid__link" href="#">Kontakt</a></li>
+                                    <li class="nav-grid__item">
+                                        <a class="nav-grid__link" href="index.html">Agencja</a>
+                                    </li>
+                                    <li class="nav-grid__item">
+                                        <a class="nav-grid__link active" href="portfolio.html"
+                                            >Portfolio</a
+                                        >
+                                    </li>
+                                    <li class="nav-grid__item">
+                                        <a class="nav-grid__link" href="#">Kontakt</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </li>
@@ -47,7 +66,7 @@
                                 </li>
                                 <li class="contacts__item">
                                     <a class="contacts__link" href="tel:+48111111111">
-                                        <svg class="icon contacts__icon " width="10" height="16">
+                                        <svg class="icon contacts__icon" width="10" height="16">
                                             <use href="./images/icons.svg#phone"></use>
                                         </svg>
                                         +48 111 111 111</a
@@ -63,11 +82,31 @@
             <section class="portfolio">
                 <div class="container">
                     <ul class="filters">
-                        <li class="filters__item"><button class="filters__btn" type="button " >Wszystkie</button></li>
-                        <li class="filters__item"><button class="filters__btn" type="button ">Strony</button></li>
-                        <li class="filters__item"><button class="filters__btn" type="button ">Aplikacje</button></li>
-                        <li class="filters__item"><button class="filters__btn" type="button ">Dizajn</button></li>
-                        <li class="filters__item"><button class="filters__btn" type="button ">Marketing</button></li>
+                        <li class="filters__item">
+                            <button class="filters__btn filters__btn--first" type="button ">
+                                Wszystkie
+                            </button>
+                        </li>
+                        <li class="filters__item">
+                            <button class="filters__btn filters__btn--second" type="button ">
+                                Strony
+                            </button>
+                        </li>
+                        <li class="filters__item">
+                            <button class="filters__btn filters__btn--third" type="button ">
+                                Aplikacje
+                            </button>
+                        </li>
+                        <li class="filters__item">
+                            <button class="filters__btn filters__btn--fourth" type="button ">
+                                Dizajn
+                            </button>
+                        </li>
+                        <li class="filters__item">
+                            <button class="filters__btn filters__btn--fifth" type="button ">
+                                Marketing
+                            </button>
+                        </li>
                     </ul>
                 </div>
                 <div class="container">
@@ -75,12 +114,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/laptop.jpg"
-                                        alt="Laptop with Technnocrack website"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/laptop.jpg   1x,
+                                                ./images/tablet/laptop2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/laptop.jpg   1x,
+                                                ./images/mobile/laptop2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/laptop.jpg"
+                                            alt="Laptop with Technnocrack website"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -90,7 +144,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <figcaption class="photo__label">
+                                <figcaption class="photo__label photo__label--first">
                                     <p class="photo__title">Technocrack</p>
                                     <p class="photo__description">Strona internetowa</p>
                                 </figcaption>
@@ -99,12 +153,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/goldenstar.jpg"
-                                        alt="Poster promoting the basketball match between New Orlean vs Golden Star"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/goldenstar.jpg   1x,
+                                                ./images/tablet/goldenstar2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/goldenstar.jpg   1x,
+                                                ./images/mobile/goldenstar2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/goldenstar.jpg"
+                                            alt="Poster promoting the basketball match between New Orlean vs Golden Star"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -123,12 +192,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/restaurant.jpg"
-                                        alt="The Seafood logo"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/restaurant.jpg   1x,
+                                                ./images/tablet/restaurant2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/restaurant.jpg   1x,
+                                                ./images/mobile/restaurant2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/restaurant.jpg"
+                                            alt="The Seafood logo"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -147,12 +231,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/headset.jpg"
-                                        alt="black headset"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/headset.jpg   1x,
+                                                ./images/tablet/headset2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/headset.jpg   1x,
+                                                ./images/mobile/headset2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/headset.jpg"
+                                            alt="black headset"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -168,15 +267,30 @@
                                 </figcaption>
                             </figure>
                         </li>
-                            <li class="photo__item">
-                                <figure class="photo__image-container">
-                                    <div class="photo__box">
-                                        <img class="photo__image"
-                                        src="./images/boxes.jpg"
-                                        alt="Two boxes. One white, second brown"
-                                        width="370"
-                                        height="294"
-                                    />
+                        <li class="photo__item">
+                            <figure class="photo__image-container">
+                                <div class="photo__box">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/boxes.jpg   1x,
+                                                ./images/tablet/boxes2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/boxes.jpg   1x,
+                                                ./images/mobile/boxes2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/boxes.jpg"
+                                            alt="Two boxes. One white, second brown"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -195,12 +309,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/monitor.jpg"
-                                        alt="Monitorn. Display show website about Inspiration"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/monitor.jpg   1x,
+                                                ./images/tablet/monitor2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/monitor.jpg   1x,
+                                                ./images/mobile/monitor2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/monitor.jpg"
+                                            alt="Monitorn. Display show website about Inspiration"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -219,12 +348,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/book.jpg"
-                                        alt="Limited edition magazine"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/book.jpg   1x,
+                                                ./images/tablet/book2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/book.jpg   1x,
+                                                ./images/mobile/book2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/book.jpg"
+                                            alt="Limited edition magazine"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -243,12 +387,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/label.jpg"
-                                        alt="Label"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/label.jpg   1x,
+                                                ./images/tablet/label2x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/label.jpg   1x,
+                                                ./images/mobile/label2x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/label.jpg"
+                                            alt="Label"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -267,12 +426,27 @@
                         <li class="photo__item">
                             <figure class="photo__image-container">
                                 <div class="photo__box">
-                                    <img class="photo__image"
-                                        src="./images/laptop2.jpg"
-                                        alt="Someone creating a owm business"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ./images/tablet/laptop2.jpg   1x,
+                                                ./images/tablet/laptop22x.jpg 2x
+                                            "
+                                            media="(min-width:768px) and (max-width:1199px)"
+                                        />
+                                        <source
+                                            srcset="
+                                                ./images/mobile/laptop2.jpg   1x,
+                                                ./images/mobile/laptop22x.jpg 2x
+                                            "
+                                            media=" (max-width:767px)"
+                                        />
+                                        <img
+                                            class="photo__image"
+                                            src="./images/laptop2.jpg"
+                                            alt="Someone creating a owm business"
+                                        />
+                                    </picture>
                                     <div class="overlay">
                                         <p class="overlay__label">
                                             Technocrack jest popularną platformą wykorzystywaną do
@@ -300,7 +474,9 @@
                     >
                     <address class="adress">
                         <p class="adress__label">m. Warszawa, Aleje Jerozolimskie 21</p>
-                            <a class="adress__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="adress__link" href="mailto:info@devstudio.com"
+                            >info@devstudio.com</a
+                        >
                         <a class="adress__link" href="tel:+48111111111">+48 111 111 111</a>
                     </address>
                 </div>
@@ -341,7 +517,8 @@
                     <form class="footer-newsletter__form" name="newsletter">
                         <label class="footer-newsletter__label" for="newsletter-email">
                             <span class="footer-newsletter__title">Zapisz się do newsettera</span>
-                            <input class="footer-newsletter__input"
+                            <input
+                                class="footer-newsletter__input"
                                 name="newsletter-email"
                                 id="newsletter-email"
                                 type="email"
@@ -349,7 +526,11 @@
                             />
                         </label>
                         <button type="submit" class="footer-newsletter__btn">
-                            Zapisz się<svg class="icon footer-newsletter__icon" width="24" height="24">
+                            Zapisz się<svg
+                                class="icon footer-newsletter__icon"
+                                width="24"
+                                height="24"
+                            >
                                 <use href="./images/icons.svg#send"></use>
                             </svg>
                         </button>
@@ -357,6 +538,61 @@
                 </div>
             </div>
         </footer>
+        <div class="menu-mobile js-menu-container" id="mobile-menu">
+            <div class="container menu-mobile__container">
+                <button type="button " class="menu-mobile__btn js-close-menu">
+                    <svg class="icon menu-mobile__icon" height="30" width="30">
+                        <use href="./images/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <ul class="menu-mobile__grid">
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link menu-mobile__link--active" href="./index.html"
+                            >Agencja</a
+                        >
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link" href="./portfolio.html">Porftolio</a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link" href="">Kontakt</a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link" href="tel:+48111111111">+48 111 111 111</a>
+                    </li>
+                    <li class="menu-mobile__item">
+                        <a class="menu-mobile__link" href="mailto:info@devstudio.com"
+                            >+info@devstudio.com</a
+                        >
+                    </li>
+                    <li class="menu-mobile__item">
+                        <div class="menu-mobile__media_container">
+                            <a
+                                class="menu-mobile__link menu-mobile__link--media"
+                                href="https://www.instagram.com/"
+                                >Instagem</a
+                            >
+                            <a
+                                class="menu-mobile__link menu-mobile__link--media"
+                                href="https://www.twitter.com/"
+                                >Twitter</a
+                            >
+                            <a
+                                class="menu-mobile__link menu-mobile__link--media"
+                                href="https://www.facebook.com/"
+                                >Facebook</a
+                            >
+                            <a
+                                class="menu-mobile__link menu-mobile__link--media"
+                                href="https://www.linkedin.com/"
+                                >linkedin</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <script src="./modal.js"></script>
+        <script src="./mobile-menu.js"></script>
     </body>
 </html>

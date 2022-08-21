@@ -7,10 +7,13 @@
         // @include flex(center, none, 30px);
         list-style: none;
     }
+    &__image {
+        width: 100%;
+    }
     &__image-container {
         margin: 0 auto 30px auto;
-        width: 270px;
-        background-color: getcolorI('label');
+        max-width: 450px;
+        background-color: getcolor('label');
         line-height: $label-line-height;
         text-align: center;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

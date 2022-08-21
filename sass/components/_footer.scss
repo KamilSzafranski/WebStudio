@@ -4,6 +4,7 @@
     color: getcolor('footer');
     &__container {
         padding: 0 15px;
+       
     }
     &__contact {
         // margin-right: 70px;
@@ -114,7 +115,7 @@
     }
     &__btn {
         margin: 0 auto;
-        display: block;
+        display: flex;
         align-items: center;
         gap: 24px;
         padding: 10px 28px 10px 42px;
