@@ -154,9 +154,8 @@
         }
         &:nth-last-child(1) {
             position: absolute;
+            padding-right: 40px;
             bottom: 48px;
-            left: 40px;
-
             max-width: 450px;
             gap: 20px;
             font-size: 18px;
@@ -165,7 +164,7 @@
         }
         &:nth-last-child(2) {
             position: absolute;
-            left: 40px;
+            padding-right: 40px;
             bottom: 134px;
             max-width: 450px;
             color: #757575;
@@ -173,9 +172,11 @@
             line-height: 1.17;
         }
         &:nth-last-child(3) {
+            padding-right: 40px;
             position: absolute;
-            left: 40px;
             bottom: 194px;
+            font-size: 34px;
+            line-height: 1.17;
         }
     }
     &__media_container {

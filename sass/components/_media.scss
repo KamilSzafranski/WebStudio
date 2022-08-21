@@ -309,7 +309,7 @@
     .page-baner {
         &__container {
             background-image: linear-gradient(to top, #2f303a66, #2f303a66),
-                url(../images/tablet/header-bg-tablet2x.jpg);
+                url(../images/tablet/header-bg-tablet@2x.jpg);
         }
     }
 }
@@ -320,7 +320,18 @@
     .page-baner {
         &__container {
             background-image: linear-gradient(to top, #2f303a66, #2f303a66),
-                url(../images/mobile/header-bg-mobile2x.jpg);
+                url(../images/mobile/header-bg-mobile@2x.jpg);
+        }
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .page-baner {
+        &__container {
+            background-image: linear-gradient(to top, #2f303a66, #2f303a66),
+                url(../images/header-bg@2x.jpg);
         }
     }
 }

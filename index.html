@@ -149,13 +149,16 @@
                             <li class="job__item">
                                 <figure class="job__image-container">
                                     <div class="job__label">aplikacje komputerowe</div>
+                                  
                                     <img
                                         class="job_image"
                                         src="./images/img1.jpg"
                                         alt="programer working his desk office"
                                         width="370"
                                         height="294"
+                                        srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
                                     />
+                                </picture>
                                 </figure>
                             </li>
                             <li class="job__item">
@@ -168,6 +171,7 @@
                                         alt="web ui designers are developing application smartphones team creators is working interface mobile phones"
                                         width="370"
                                         height="294"
+                                        srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
                                     />
                                 </figure>
                             </li>
@@ -180,6 +184,7 @@
                                         alt="creative artist web design with working colour selection graphic tablet"
                                         width="370"
                                         height="294"
+                                        srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
                                     />
                                 </figure>
                             </li>
@@ -197,17 +202,24 @@
                                     <source
                                         srcset="
                                             ./images/tablet/productdesigner.jpg   1x,
-                                            ./images/tablet/productdesigner2x.jpg 2x
+                                            ./images/tablet/productdesigner@2x.jpg 2x
                                         "
                                         media="(min-width:768px) and (max-width:1199px)"
                                     />
                                     <source
                                         srcset="
                                             ./images/mobile/productdesigner.jpg   1x,
-                                            ./images/mobile/productdesigner2x.jpg 2x
+                                            ./images/mobile/productdesigner@2x.jpg 2x
                                         "
                                         media="(max-width:767px)"
                                     />
+                                    <source
+                                    srcset="
+                                        ./images/productdesigner.jpg   1x,
+                                        ./images/productdesigner@2x.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                />
                                     <img
                                         class="team__image"
                                         src="./images/productdesigner.jpg"
@@ -285,17 +297,24 @@
                                     <source
                                         srcset="
                                             ./images/tablet/frontend.jpg   1x,
-                                            ./images/tablet/frontend2x.jpg 2x
+                                            ./images/tablet/frontend@2x.jpg 2x
                                         "
                                         media="(min-width:768px) and (max-width:1199px)"
                                     />
                                     <source
                                         srcset="
                                             ./images/mobile/frontend.jpg   1x,
-                                            ./images/mobile/frontend2x.jpg 2x
+                                            ./images/mobile/frontend@2x.jpg 2x
                                         "
                                         media="(max-width:767px)"
                                     />
+                                    <source
+                                    srcset="
+                                        ./images/frontend.jpg   1x,
+                                        ./images/frontend@2x.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                />
                                     <img
                                         class="team__image"
                                         src="./images/frontend.jpg"
@@ -373,17 +392,24 @@
                                     <source
                                         srcset="
                                             ./images/tablet/marketing.jpg   1x,
-                                            ./images/tablet/marketing2x.jpg 2x
+                                            ./images/tablet/marketing@2x.jpg 2x
                                         "
                                         media="(min-width:768px) and (max-width:1199px)"
                                     />
                                     <source
                                         srcset="
                                             ./images/mobile/marketing.jpg   1x,
-                                            ./images/mobile/marketing2x.jpg 2x
+                                            ./images/mobile/marketing@2x.jpg 2x
                                         "
                                         media="(max-width:767px)"
                                     />
+                                    <source
+                                    srcset="
+                                        ./images/marketing.jpg   1x,
+                                        ./images/marketing@2x.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                />
                                     <img
                                         class="team__image"
                                         src="./images/marketing.jpg"
@@ -461,17 +487,24 @@
                                     <source
                                         srcset="
                                             ./images/tablet/ui.jpg   1x,
-                                            ./images/tablet/ui2x.jpg 2x
+                                            ./images/tablet/ui@2x.jpg 2x
                                         "
                                         media="(min-width:768px) and (max-width:1199px)"
                                     />
                                     <source
                                         srcset="
                                             ./images/mobile/ui.jpg   1x,
-                                            ./images/mobile/ui2x.jpg 2x
+                                            ./images/mobile/ui@2x.jpg 2x
                                         "
                                         media="(max-width:767px)"
                                     />
+                                    <source
+                                    srcset="
+                                        ./images/ui.jpg   1x,
+                                        ./images/ui@2x.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                />
                                     <img class="team__image" src="./images/ui.jpg" alt="Jonh Doe" />
                                 </picture>
                                 <figcaption class="team__image-label">
@@ -782,7 +815,7 @@
                             <a
                                 class="menu-mobile__link menu-mobile__link--media"
                                 href="https://www.instagram.com/"
-                                >Instagem</a
+                                >Instagram</a
                             >
                             <a
                                 class="menu-mobile__link menu-mobile__link--media"
