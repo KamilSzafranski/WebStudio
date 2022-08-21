@@ -5,7 +5,6 @@
 
 .logo-grid {
     padding: 16px 15px;
-    // @include flex(space-between, center, none);
     list-style: none;
     font-weight: 500;
     color: getcolor('menu');
@@ -87,7 +86,7 @@
 }
 
 .menu-mobile {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;

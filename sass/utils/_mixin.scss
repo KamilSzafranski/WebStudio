@@ -10,3 +10,9 @@
     background-color: getcolor('#{$scolor}');
     min-width: 290px;
 }
+
+@mixin h2($fs, $fw, $lh) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
