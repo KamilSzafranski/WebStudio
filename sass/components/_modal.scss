@@ -124,7 +124,7 @@
     position: relative;
     margin-bottom: 30px;
     &__label {
-        @include flex(center, none, none);
+        @include flex(center, center, none);
         font-size: 12px;
         line-height: 1.16;
     }

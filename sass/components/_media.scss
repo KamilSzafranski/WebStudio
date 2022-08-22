@@ -89,7 +89,7 @@
         list-style: none;
         @include flex(center, none, none);
         column-gap: 8px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         &__btn {
             @extend %btn-small;
             padding: 6px 22px;
@@ -102,9 +102,6 @@
                 transform: scale(1.05);
             }
         }
-    }
-    .filters {
-        column-gap: 8px;
     }
 
     .photo {
@@ -144,19 +141,6 @@
     .contacts {
         flex-direction: row;
         gap: 30px;
-    }
-    .nav-grid {
-        &__link {
-            &:hover::after,
-            &:focus::after {
-                bottom: -33px;
-            }
-        }
-        .active {
-            &:after {
-                bottom: -33px;
-            }
-        }
     }
     .page-baner {
         &__container {
@@ -299,6 +283,23 @@
         &__label {
             font-size: 14px;
             line-height: 1.71;
+        }
+    }
+    .portfolio {
+        padding: 94px 0;
+    }
+    .filters {
+        margin-bottom: 50px;
+        %__btn {
+            padding: 6px 22px;
+        }
+    }
+    .photo {
+        &__item {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+        &__label--first {
+            padding-bottom: 20px;
         }
     }
 }
