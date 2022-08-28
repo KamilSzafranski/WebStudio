@@ -39,10 +39,10 @@
 }
 
 .team-media {
-    @include flex(center, none, 10px);
+    @include flex(center, initial, 10px);
     list-style: none;
     &__link {
-        @include flex(center, center, none);
+        @include flex(center, center, initial);
         width: 44px;
         height: 44px;
         border-radius: 50%;

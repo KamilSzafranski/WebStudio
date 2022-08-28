@@ -21,11 +21,11 @@
         display: none;
     }
     .nav-grid {
-        @include flex(none, center, 46px);
+        @include flex(initial, center, 46px);
     }
     .logo-grid {
         padding: 19px 15px;
-        @include flex(space-between, center, none);
+        @include flex(space-between, center, initial);
     }
     .contacts {
         display: flex;
@@ -53,7 +53,7 @@
     }
     .team {
         &__grid {
-            @include flex(center, none, 30px);
+            @include flex(center, initial, 30px);
             flex-wrap: wrap;
         }
     }
@@ -87,7 +87,7 @@
     }
     .filters {
         list-style: none;
-        @include flex(center, none, none);
+        display: flex;
         column-gap: 8px;
         margin-bottom: 30px;
         &__btn {
@@ -127,7 +127,7 @@
     }
     .logo-grid {
         padding: 25px 15px;
-        @include flex(space-between, center, none);
+        @include flex(space-between, center, initial);
         &__item {
             gap: 93px;
         }
@@ -161,7 +161,7 @@
         &__grid {
             padding: 0 15px;
 
-            @include flex(space-around, none, none);
+            @include flex(space-around, initial, initial);
             column-gap: 30px;
             flex-wrap: nowrap;
         }
@@ -180,7 +180,7 @@
             margin-bottom: 50px;
         }
         &__grid {
-            @include flex(space-around, none, none);
+            @include flex(space-around, initial, initial);
             list-style: none;
         }
         &__item {

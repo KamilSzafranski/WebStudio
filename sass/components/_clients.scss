@@ -11,7 +11,7 @@
         list-style: none;
     }
     &__item {
-        @include flex(center, center, none);
+        @include flex(center, center, initial);
         flex-basis: calc((100% - 30px) / 2);
         height: 92px;
         width: 170px;

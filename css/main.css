@@ -291,7 +291,7 @@ img {
   font-size: 14px;
 }
 .description__item {
-  text-align: none;
+  text-align: initial;
 }
 .description__container {
   padding: 25px 0;
@@ -358,7 +358,7 @@ img {
 .team-media {
   display: flex;
   justify-content: center;
-  align-items: none;
+  align-items: initial;
   gap: 10px;
   list-style: none;
 }
@@ -366,7 +366,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -393,7 +393,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   flex-basis: calc((100% - 30px) / 2);
   height: 92px;
   width: 170px;
@@ -424,7 +424,7 @@ img {
 .footer__link {
   display: block;
   margin-bottom: 20px;
-  font-size: 700;
+  font-weight: 700;
   font-size: 24px;
   font-family: Raleway, sans-serif;
   line-height: 1.17;
@@ -464,7 +464,7 @@ img {
 .footer-media__grid {
   display: flex;
   justify-content: center;
-  align-items: none;
+  align-items: initial;
   gap: 10px;
   list-style: none;
 }
@@ -472,7 +472,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -536,8 +536,8 @@ img {
   padding: 0 15px;
   display: flex;
   justify-content: flex-start;
-  align-items: none;
-  gap: none;
+  align-items: initial;
+  gap: initial;
   flex-wrap: wrap;
   -moz-column-gap: 12px;
        column-gap: 12px;
@@ -612,7 +612,6 @@ img {
 }
 .photo__description {
   line-height: 1.875;
-  color: getclot("photo-desption");
 }
 .photo__image {
   display: block;
@@ -650,7 +649,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   position: fixed;
   left: 0;
   top: 0;
@@ -672,13 +671,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   position: absolute;
   right: 8px;
   top: 8px;
   width: 30px;
   height: 30px;
-  background-color: get-color("modal-box-bg");
+  background-color: #fff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -690,8 +689,8 @@ img {
 
 .services__container {
   display: flex;
-  justify-content: none;
-  align-items: none;
+  justify-content: initial;
+  align-items: initial;
   gap: 12px;
   flex-direction: column;
   margin-bottom: 20px;
@@ -765,7 +764,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   position: relative;
   margin-bottom: 30px;
 }
@@ -773,7 +772,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: none;
+  gap: initial;
   font-size: 12px;
   line-height: 1.16;
 }
@@ -828,7 +827,7 @@ img {
   }
   .nav-grid {
     display: flex;
-    justify-content: none;
+    justify-content: initial;
     align-items: center;
     gap: 46px;
   }
@@ -837,7 +836,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: none;
+    gap: initial;
   }
   .contacts {
     display: flex;
@@ -861,7 +860,7 @@ img {
   .team__grid {
     display: flex;
     justify-content: center;
-    align-items: none;
+    align-items: initial;
     gap: 30px;
     flex-wrap: wrap;
   }
@@ -891,9 +890,6 @@ img {
   .filters {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: none;
-    gap: none;
     -moz-column-gap: 8px;
          column-gap: 8px;
     margin-bottom: 30px;
@@ -932,7 +928,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: none;
+    gap: initial;
   }
   .logo-grid__item {
     gap: 93px;
@@ -964,8 +960,8 @@ img {
     padding: 0 15px;
     display: flex;
     justify-content: space-around;
-    align-items: none;
-    gap: none;
+    align-items: initial;
+    gap: initial;
     -moz-column-gap: 30px;
          column-gap: 30px;
     flex-wrap: nowrap;
@@ -989,8 +985,8 @@ img {
   .job__grid {
     display: flex;
     justify-content: space-around;
-    align-items: none;
-    gap: none;
+    align-items: initial;
+    gap: initial;
     list-style: none;
   }
   .job__item {

@@ -5,7 +5,7 @@
 }
 
 .modal {
-    @include flex(center, center, none);
+    @include flex(center, center, initial);
     position: fixed;
     left: 0;
     top: 0;
@@ -28,13 +28,13 @@
         @extend %icon;
     }
     &__btn {
-        @include flex(center, center, none);
+        @include flex(center, center, initial);
         position: absolute;
         right: 8px;
         top: 8px;
         width: 30px;
         height: 30px;
-        background-color: get-color('modal-box-bg');
+        background-color: getcolor('modal-box-bg');
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
@@ -47,7 +47,7 @@
 }
 .services {
     &__container {
-        @include flex(none, none, 12px);
+        @include flex(initial, initial, 12px);
         flex-direction: column;
         margin-bottom: 20px;
     }
@@ -120,11 +120,11 @@
 }
 
 .rules {
-    @include flex(center, center, none);
+    @include flex(center, center, initial);
     position: relative;
     margin-bottom: 30px;
     &__label {
-        @include flex(center, center, none);
+        @include flex(center, center, initial);
         font-size: 12px;
         line-height: 1.16;
     }
