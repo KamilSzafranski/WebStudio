@@ -325,6 +325,7 @@ img {
 }
 .team__grid {
   list-style: none;
+  padding: 0 15px;
 }
 .team__image {
   width: 100%;
