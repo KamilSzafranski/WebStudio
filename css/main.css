@@ -893,6 +893,7 @@ img {
     display: flex;
     -moz-column-gap: 8px;
          column-gap: 8px;
+    justify-content: center;
     margin-bottom: 30px;
   }
   .filters__btn {
@@ -1088,7 +1089,6 @@ img {
     padding: 94px 0;
   }
   .filters {
-    justify-content: center;
     margin-bottom: 50px;
   }
   .photo__item {
