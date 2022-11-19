@@ -816,12 +816,12 @@ img {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
-    max-width: 480px;
+    max-width: 767px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 1199px;
   }
   .nav__btn {
     display: none;
@@ -1088,6 +1088,7 @@ img {
     padding: 94px 0;
   }
   .filters {
+    justify-content: center;
     margin-bottom: 50px;
   }
   .photo__item {
